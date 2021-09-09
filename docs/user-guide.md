@@ -15,8 +15,8 @@ Such annotations are useful to (for example):
 
 ## Java variables are references
 
-In Java, all non-primitive variables are references. We often think of `String
-x` as meaning "`x` is a `String`", but actually it means "`x` is a _reference_,
+In Java, `String
+x` means "`x` is a _reference_,
 either null or a reference to a string object".
 
 JSpecify includes a `@NullMarked` annotation. In code covered by that
@@ -25,30 +25,37 @@ annotation, `String x` means "`x` is a reference to a string object", and
 
 ## Types and nullness
 
-Each reference can have one of three possible properties regarding nullness:
+Each reference expression in a program can have one of two possible properties
+regarding nullness:
 
-1. JSpecify annotations indicate that it can be null.
-2. JSpecify annotations indicate that it can't be null.
+1. The expression can evaluate to null on a correct execution of the program.
+2. The expression never evaluates to null on a correct execution of the program.
+
+For a given reference `x`, if `x` can be null then `x.getClass()`
+might produce a NullPointerException. If `x` can't be null, `x.getClass()`
+can never produce a NullPointerException.
+
+JSpecify annotations are type annotations.
+For any type use in a program, there are three possibilities:
+
+1. JSpecify annotations indicate that the type includes null.  An expression of
+that type can evaluate to null.  (Throughout, specifications refer to correct
+executions of the program.)
+2. JSpecify annotations indicate that the type does not include null.  An
+expression of that type cannot evaluate to null.
 3. JSpecify annotations don't indicate whether it can be null.
 
-For a given reference `x`, if `x` can be null then `x.getClass()` is unsafe because
-it could produce a NullPointerException. If `x` can't be null, `x.getClass()`
-can never produce a NullPointerException. If JSpecify annotations haven't said
-whether `x` can be null or not, we don't know whether `x.getClass()` is safe (at
-least as far as JSpecify is concerned).
-
 There are two JSpecify annotations that indicate these properties:
-* `@Nullable` applied to a type means a reference of that type that can be null.
-* `@NullMarked` applied to a module, package, or class means that a reference in
-that scope can't be null unless its type is explicitly marked `@Nullable`. (Below
-we will see that there are some exceptions to this for [local
+* `@Nullable` applied to a type means the type includes the null value.
+* `@NullMarked` applied to a module, package, or class means that a type use in
+that scope does not include null unless its type is explicitly marked `@Nullable`.
+(Below we will see that there are some exceptions to this for [local
 variables](#local-variables) and [type variables](#defining-generics).)
 
-The notion of "can't be null" should really be read with a footnote that says
-"if all the code in question is `@NullMarked`". For example, if you have some code
-that is not `@NullMarked` and that calls a `@NullMarked` method, then tools might
-allow it to pass a possibly-null value to a method that is expecting a "can't be
-null" parameter.
+A type that includes null is a supertype of the corresponding type that does not
+include null.
+For example, within `@NullMarked`, `String` is a subtype of `@Nullable String`.
+
 
 ## `@Nullable`
 
