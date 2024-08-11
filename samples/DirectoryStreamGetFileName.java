@@ -20,7 +20,7 @@ import org.jspecify.annotations.NullMarked;
 @NullMarked
 abstract class DirectoryStreamGetFileName {
   void x(Path p) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     consume(p.getFileName());
   }
 

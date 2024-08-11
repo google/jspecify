@@ -26,7 +26,7 @@ import org.jspecify.annotations.NullMarked;
 @NullMarked
 class GetGenericDeclaration {
   Object x(TypeVariable<?> typeVariable) {
-    // jspecify_but_expect_warning
+    // :: error: jspecify_but_expect_warning
     return typeVariable.getGenericDeclaration();
   }
 }

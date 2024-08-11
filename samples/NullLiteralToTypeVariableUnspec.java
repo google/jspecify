@@ -41,82 +41,82 @@ class NullLiteralToTypeVariableUnspec<
     //
     UnusedT> {
   @NullnessUnspecified Never1T x0() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified ChildOfNever1T x1() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified UnspecChildOfNever1T x2() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified NullChildOfNever1T x3() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified Never2T x4() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified ChildOfNever2T x5() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified UnspecChildOfNever2T x6() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified NullChildOfNever2T x7() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified UnspecT x8() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified ChildOfUnspecT x9() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified UnspecChildOfUnspecT x10() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified NullChildOfUnspecT x11() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified ParametricT x12() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified ChildOfParametricT x13() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified UnspecChildOfParametricT x14() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 
   @NullnessUnspecified NullChildOfParametricT x15() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 }

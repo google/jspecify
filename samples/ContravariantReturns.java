@@ -26,15 +26,15 @@ interface ContravariantReturns {
 
   interface Subtype extends ContravariantReturns {
     @Override
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     @Nullable Object makeObject();
 
     @Override
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     Lib<?> makeImplicitlyObjectBounded();
 
     @Override
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     Lib<? extends @Nullable Object> makeExplicitlyObjectBounded();
   }
 

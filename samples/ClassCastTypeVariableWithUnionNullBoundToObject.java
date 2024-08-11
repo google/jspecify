@@ -20,17 +20,17 @@ import org.jspecify.annotations.NullnessUnspecified;
 @NullMarked
 class ClassCastTypeVariableWithUnionNullBoundToObject<T extends @Nullable Object> {
   Object x0(T p) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return Object.class.cast(p);
   }
 
   Object x1(@NullnessUnspecified T p) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return Object.class.cast(p);
   }
 
   Object x2(@Nullable T p) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return Object.class.cast(p);
   }
 }

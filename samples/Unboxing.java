@@ -24,12 +24,12 @@ class Unboxing {
   }
 
   int x1(@NullnessUnspecified Integer i) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return i;
   }
 
   int x2(@Nullable Integer i) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return i;
   }
 
@@ -38,12 +38,12 @@ class Unboxing {
   }
 
   long x4(@NullnessUnspecified Integer i) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return i;
   }
 
   long x5(@Nullable Integer i) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return i;
   }
 }

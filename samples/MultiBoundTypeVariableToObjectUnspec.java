@@ -24,43 +24,43 @@ class MultiBoundTypeVariableToObjectUnspec {
   }
 
   <T extends Object & @NullnessUnspecified Lib> @NullnessUnspecified Object x1(T x) {
-    // jspecify_but_expect_warning
+    // :: error: jspecify_but_expect_warning
     return x;
   }
 
   <T extends Object & @Nullable Lib> @NullnessUnspecified Object x2(T x) {
-    // jspecify_but_expect_warning
+    // :: error: jspecify_but_expect_warning
     return x;
   }
 
   <T extends @NullnessUnspecified Object & Lib> @NullnessUnspecified Object x3(T x) {
-    // jspecify_but_expect_warning
+    // :: error: jspecify_but_expect_warning
     return x;
   }
 
   <T extends @NullnessUnspecified Object & @NullnessUnspecified Lib> @NullnessUnspecified Object x4(
       T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   <T extends @NullnessUnspecified Object & @Nullable Lib> @NullnessUnspecified Object x5(T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   <T extends @Nullable Object & Lib> @NullnessUnspecified Object x6(T x) {
-    // jspecify_but_expect_warning
+    // :: error: jspecify_but_expect_warning
     return x;
   }
 
   <T extends @Nullable Object & @NullnessUnspecified Lib> @NullnessUnspecified Object x7(T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   <T extends @Nullable Object & @Nullable Lib> @NullnessUnspecified Object x8(T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 

@@ -23,7 +23,7 @@ class NullCheckTypeVariable<T> {
     if (o != null) {
       return o;
     } else {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     }
   }
@@ -32,14 +32,14 @@ class NullCheckTypeVariable<T> {
     if (o != null) {
       return o;
     } else {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     }
   }
 
   Object x4(@NullnessUnspecified T o) {
     if (o == null) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     } else {
       return o;
@@ -48,7 +48,7 @@ class NullCheckTypeVariable<T> {
 
   Object x5(@Nullable T o) {
     if (o == null) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     } else {
       return o;

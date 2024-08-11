@@ -24,37 +24,37 @@ class SameTypeTypeVariable<T extends @Nullable Object> {
   }
 
   Lib<T> x1(Lib<@NullnessUnspecified T> x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Lib<T> x2(Lib<@Nullable T> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Lib<@NullnessUnspecified T> x3(Lib<T> x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Lib<@NullnessUnspecified T> x4(Lib<@NullnessUnspecified T> x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Lib<@NullnessUnspecified T> x5(Lib<@Nullable T> x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Lib<@Nullable T> x6(Lib<T> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Lib<@Nullable T> x7(Lib<@NullnessUnspecified T> x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 

@@ -21,7 +21,7 @@ import org.jspecify.annotations.Nullable;
 interface NullUnmarkedUndoesNullMarkedForWildcards {
   @NullUnmarked
   default void apply(Supplier<?> supplier) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     acceptObject(supplier.get());
   }
 

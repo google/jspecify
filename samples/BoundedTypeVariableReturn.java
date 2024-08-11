@@ -23,12 +23,12 @@ class BoundedTypeVariableReturn {
   }
 
   Foo use(NullableFooSupplier<?> supplier) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return supplier.get();
   }
 
   Lib<? extends Foo> use(LibOfNullableFooSupplier<?> supplier) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return supplier.get();
   }
 

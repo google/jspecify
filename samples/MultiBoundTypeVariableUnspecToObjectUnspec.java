@@ -20,53 +20,53 @@ import org.jspecify.annotations.NullnessUnspecified;
 @NullMarked
 class MultiBoundTypeVariableUnspecToObjectUnspec {
   <T extends Object & Lib> @NullnessUnspecified Object x0(@NullnessUnspecified T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   <T extends Object & @NullnessUnspecified Lib> @NullnessUnspecified Object x1(
       @NullnessUnspecified T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   <T extends Object & @Nullable Lib> @NullnessUnspecified Object x2(@NullnessUnspecified T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   <T extends @NullnessUnspecified Object & Lib> @NullnessUnspecified Object x3(
       @NullnessUnspecified T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   <T extends @NullnessUnspecified Object & @NullnessUnspecified Lib> @NullnessUnspecified Object x4(
       @NullnessUnspecified T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   <T extends @NullnessUnspecified Object & @Nullable Lib> @NullnessUnspecified Object x5(
       @NullnessUnspecified T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   <T extends @Nullable Object & Lib> @NullnessUnspecified Object x6(@NullnessUnspecified T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   <T extends @Nullable Object & @NullnessUnspecified Lib> @NullnessUnspecified Object x7(
       @NullnessUnspecified T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   <T extends @Nullable Object & @Nullable Lib> @NullnessUnspecified Object x8(
       @NullnessUnspecified T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 

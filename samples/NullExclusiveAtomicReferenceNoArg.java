@@ -21,15 +21,15 @@ import org.jspecify.annotations.NullnessUnspecified;
 @NullMarked
 class NullExclusiveAtomicReferenceNoArg {
   void x0() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     AtomicReference<Object> a = new AtomicReference<Object>();
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     AtomicReference<Object> b = new AtomicReference<>();
     AtomicReference<Object> c = new AtomicReference<Object>() {};
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     AtomicReference<?> d = new AtomicReference<@NullnessUnspecified Object>();
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     AtomicReference<@NullnessUnspecified Object> e = new AtomicReference<>();
 
     AtomicReference<@Nullable Object> f = new AtomicReference<@Nullable Object>();
@@ -37,53 +37,53 @@ class NullExclusiveAtomicReferenceNoArg {
   }
 
   <T> void x1() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     AtomicReference<T> a = new AtomicReference<T>();
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     AtomicReference<?> b = new AtomicReference<@NullnessUnspecified T>();
 
     AtomicReference<@Nullable T> c = new AtomicReference<@Nullable T>();
   }
 
   <T extends @NullnessUnspecified Object> void x2() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     AtomicReference<T> a = new AtomicReference<T>();
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     AtomicReference<?> b = new AtomicReference<@NullnessUnspecified T>();
 
     AtomicReference<@Nullable T> c = new AtomicReference<@Nullable T>();
   }
 
   <T extends @Nullable Object> void x3() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     AtomicReference<T> a = new AtomicReference<T>();
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     AtomicReference<?> b = new AtomicReference<@NullnessUnspecified T>();
 
     AtomicReference<@Nullable T> c = new AtomicReference<@Nullable T>();
   }
 
-  // jspecify_nullness_mismatch
+  // :: error: jspecify_nullness_mismatch
   static class MyAtomicReferenceImplicitSuper extends AtomicReference<Object> {}
 
   static class MyAtomicReferenceExplicitSuper extends AtomicReference<Object> {
     MyAtomicReferenceExplicitSuper() {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       super();
     }
   }
 
-  // jspecify_nullness_not_enough_information
+  // :: error: jspecify_nullness_not_enough_information
   static class MyAtomicReferenceImplicitSuperUnspec
       extends AtomicReference<@NullnessUnspecified Object> {}
 
   static class MyAtomicReferenceExplicitSuperUnspec
       extends AtomicReference<@NullnessUnspecified Object> {
     MyAtomicReferenceExplicitSuperUnspec() {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       super();
     }
   }

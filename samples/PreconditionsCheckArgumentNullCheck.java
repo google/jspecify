@@ -21,7 +21,7 @@ import org.jspecify.annotations.Nullable;
 @NullMarked
 class PreconditionsCheckArgumentNullCheck {
   Object x0(@Nullable Object o) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return o;
   }
 
@@ -32,7 +32,7 @@ class PreconditionsCheckArgumentNullCheck {
 
   Object x2(@Nullable Object o) {
     checkArgument(o == null);
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return o;
   }
 }

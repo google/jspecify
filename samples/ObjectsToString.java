@@ -27,13 +27,13 @@ class ObjectsToString {
 
   String x1(@Nullable Object nullable, @NullnessUnspecified String defaultValue) {
     String result = Objects.toString(nullable, defaultValue);
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return result;
   }
 
   String x2(@Nullable Object nullable, @Nullable String defaultValue) {
     String result = Objects.toString(nullable, defaultValue);
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return result;
   }
 

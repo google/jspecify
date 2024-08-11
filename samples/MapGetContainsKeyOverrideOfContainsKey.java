@@ -25,7 +25,7 @@ class MapGetContainsKeyOverrideOfContainsKey {
   }
 
   Object noCheckObject(MyMap<Object, Object> map, Object key) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return map.get(key);
   }
 

@@ -30,17 +30,17 @@ interface ExtendsVsExtendsNullable {
   }
 
   default <T> void x1(Supplier<? extends @NullnessUnspecified T> s, Other<T> o) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     useNonNullBounded(s, o);
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     useUnspecBounded(s, o);
     useUnionNullBounded(s, o);
   }
 
   default <T> void x2(Supplier<? extends @Nullable T> s, Other<T> o) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     useNonNullBounded(s, o);
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     useUnspecBounded(s, o);
     useUnionNullBounded(s, o);
   }

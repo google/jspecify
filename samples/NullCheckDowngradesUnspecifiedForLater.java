@@ -31,7 +31,7 @@ class NullCheckDowngradesUnspecifiedForLater {
      * then you should probably check for null in the future, too.
      */
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return o;
   }
 }

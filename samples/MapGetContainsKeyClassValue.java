@@ -21,7 +21,7 @@ import org.jspecify.annotations.NullnessUnspecified;
 @NullMarked
 class MapGetContainsKeyClassValue {
   Object noCheckObject(Map<Object, Object> map, Object key) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return map.get(key);
   }
 
@@ -33,26 +33,26 @@ class MapGetContainsKeyClassValue {
   }
 
   Object noCheckObjectUnspec(Map<Object, @NullnessUnspecified Object> map, Object key) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return map.get(key);
   }
 
   Object checkObjectUspec(Map<Object, @NullnessUnspecified Object> map, Object key) {
     if (map.containsKey(key)) {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       return map.get(key);
     }
     return "";
   }
 
   Object noCheckObjectUnionNull(Map<Object, @Nullable Object> map, Object key) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return map.get(key);
   }
 
   Object checkObjectUnionNull(Map<Object, @Nullable Object> map, Object key) {
     if (map.containsKey(key)) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return map.get(key);
     }
     return "";

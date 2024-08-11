@@ -24,42 +24,42 @@ class MultiBoundTypeVariableToOther {
   }
 
   <T extends Object & @NullnessUnspecified Lib> Lib x1(T x) {
-    // jspecify_but_expect_warning
+    // :: error: jspecify_but_expect_warning
     return x;
   }
 
   <T extends Object & @Nullable Lib> Lib x2(T x) {
-    // jspecify_but_expect_error
+    // :: error: jspecify_but_expect_error
     return x;
   }
 
   <T extends @NullnessUnspecified Object & Lib> Lib x3(T x) {
-    // jspecify_but_expect_warning
+    // :: error: jspecify_but_expect_warning
     return x;
   }
 
   <T extends @NullnessUnspecified Object & @NullnessUnspecified Lib> Lib x4(T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   <T extends @NullnessUnspecified Object & @Nullable Lib> Lib x5(T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   <T extends @Nullable Object & Lib> Lib x6(T x) {
-    // jspecify_but_expect_error
+    // :: error: jspecify_but_expect_error
     return x;
   }
 
   <T extends @Nullable Object & @NullnessUnspecified Lib> Lib x7(T x) {
-    // jspecify_nullness_not_enough_information jspecify_but_expect_error
+    // :: error: jspecify_nullness_not_enough_information jspecify_but_expect_error
     return x;
   }
 
   <T extends @Nullable Object & @Nullable Lib> Lib x8(T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 

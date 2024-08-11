@@ -37,7 +37,7 @@ class TernaryUnspecVsNoQualifier {
 
   static class Iterables {
     static <E> Iterable<E> concat(Iterable<? extends E> a, Iterable<? extends E> b) {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       return Collections.emptyList();
     }
   }
@@ -47,7 +47,7 @@ class TernaryUnspecVsNoQualifier {
 
     void go(boolean b) {
       Iterable<Foo<T>> it =
-          // jspecify_nullness_not_enough_information
+          // :: error: jspecify_nullness_not_enough_information
           b ? ImmutableList.of(this) : Iterables.concat(others(), ImmutableList.of(this));
     }
   }

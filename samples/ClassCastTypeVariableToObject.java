@@ -24,12 +24,12 @@ class ClassCastTypeVariableToObject<T> {
   }
 
   Object x1(@NullnessUnspecified T p) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return Object.class.cast(p);
   }
 
   Object x2(@Nullable T p) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return Object.class.cast(p);
   }
 }

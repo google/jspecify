@@ -25,7 +25,7 @@ class NullExclusiveAtomicReferenceOneArg {
     AtomicReference<Object> b = new AtomicReference<>(o);
 
     AtomicReference<?> c = new AtomicReference<@NullnessUnspecified Object>(o);
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     AtomicReference<@NullnessUnspecified Object> d = new AtomicReference<>(o);
 
     AtomicReference<@Nullable Object> e = new AtomicReference<@Nullable Object>(o);

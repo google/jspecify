@@ -22,12 +22,12 @@ class StandardSystemProperty {
   }
 
   Object x1() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return System.getProperty("foo.bar");
   }
 
   Object x2(String key) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return System.getProperty(key);
   }
 }

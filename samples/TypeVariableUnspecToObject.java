@@ -41,82 +41,82 @@ class TypeVariableUnspecToObject<
     //
     UnusedT> {
   Object x0(@NullnessUnspecified Never1T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Object x1(@NullnessUnspecified ChildOfNever1T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Object x2(@NullnessUnspecified UnspecChildOfNever1T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Object x3(@NullnessUnspecified NullChildOfNever1T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Object x4(@NullnessUnspecified Never2T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Object x5(@NullnessUnspecified ChildOfNever2T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Object x6(@NullnessUnspecified UnspecChildOfNever2T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Object x7(@NullnessUnspecified NullChildOfNever2T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Object x8(@NullnessUnspecified UnspecT x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Object x9(@NullnessUnspecified ChildOfUnspecT x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Object x10(@NullnessUnspecified UnspecChildOfUnspecT x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Object x11(@NullnessUnspecified NullChildOfUnspecT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Object x12(@NullnessUnspecified ParametricT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Object x13(@NullnessUnspecified ChildOfParametricT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Object x14(@NullnessUnspecified UnspecChildOfParametricT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Object x15(@NullnessUnspecified NullChildOfParametricT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 }

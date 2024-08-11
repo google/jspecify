@@ -21,7 +21,7 @@ import org.jspecify.annotations.NullMarked;
 class MapGetKeySet {
   Object otherColletion(Map<Object, Object> map) {
     for (Object o : map.values()) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return map.get(o);
     }
     return "";
@@ -29,7 +29,7 @@ class MapGetKeySet {
 
   Object otherMapKeySet(Map<Object, Object> map, Map<Object, Object> otherMap) {
     for (Object o : otherMap.keySet()) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return map.get(o);
     }
     return "";
@@ -37,7 +37,7 @@ class MapGetKeySet {
 
   Object otherObject(Map<Object, Object> map, Object something) {
     for (Object o : map.keySet()) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return map.get(something);
     }
     return "";
@@ -74,7 +74,7 @@ class MapGetKeySet {
 
   Object keySetOfNonVariableOtherObjectSameElement(MapHolder holder1, MapHolder holder2) {
     for (Object o : holder1.get().keySet()) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return holder2.get().get(o);
     }
     return "";

@@ -18,12 +18,12 @@ import org.jspecify.annotations.Nullable;
 // Covered by
 // conformance-tests/src/assertions/java/org/jspecify/conformance/tests/irrelevantannotations/notnullmarked/AnnotatedTypeParameters.java
 class NotNullMarkedAnnotatedTypeParameter {
-  // jspecify_unrecognized_location
+  // :: error: jspecify_unrecognized_location
   interface Lib1<@Nullable T> {}
 
-  // jspecify_unrecognized_location
+  // :: error: jspecify_unrecognized_location
   interface Lib2<@Nullable T extends Object> {}
 
-  // jspecify_unrecognized_location
+  // :: error: jspecify_unrecognized_location
   interface Lib3<@Nullable T extends @Nullable Object> {}
 }

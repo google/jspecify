@@ -25,21 +25,21 @@ abstract class NotNullMarkedAnnotatedInnerOfNonParameterized {
   void foo(
       @Nullable Nested x4,
 
-      // jspecify_nullness_intrinsically_not_nullable
+      // :: error: jspecify_nullness_intrinsically_not_nullable
       @Nullable NotNullMarkedAnnotatedInnerOfNonParameterized.Nested x5,
       NotNullMarkedAnnotatedInnerOfNonParameterized.@Nullable Nested x6,
 
-      // jspecify_nullness_intrinsically_not_nullable
+      // :: error: jspecify_nullness_intrinsically_not_nullable
       @Nullable NotNullMarkedAnnotatedInnerOfNonParameterized.Nested.DoublyNested x7,
 
-      // jspecify_nullness_intrinsically_not_nullable
+      // :: error: jspecify_nullness_intrinsically_not_nullable
       NotNullMarkedAnnotatedInnerOfNonParameterized.@Nullable Nested.DoublyNested x8,
       NotNullMarkedAnnotatedInnerOfNonParameterized.Nested.@Nullable DoublyNested x9,
 
-      // jspecify_nullness_intrinsically_not_nullable
+      // :: error: jspecify_nullness_intrinsically_not_nullable
       Lib<@Nullable NotNullMarkedAnnotatedInnerOfNonParameterized.Nested.DoublyNested> l1,
 
-      // jspecify_nullness_intrinsically_not_nullable
+      // :: error: jspecify_nullness_intrinsically_not_nullable
       Lib<NotNullMarkedAnnotatedInnerOfNonParameterized.@Nullable Nested.DoublyNested> l2,
       Lib<NotNullMarkedAnnotatedInnerOfNonParameterized.Nested.DoublyNested> l3) {}
 
@@ -47,6 +47,6 @@ abstract class NotNullMarkedAnnotatedInnerOfNonParameterized {
     return n.new DoublyNested();
   }
 
-  // jspecify_nullness_intrinsically_not_nullable
+  // :: error: jspecify_nullness_intrinsically_not_nullable
   abstract @Nullable NotNullMarkedAnnotatedInnerOfNonParameterized.Nested returnType();
 }

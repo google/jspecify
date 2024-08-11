@@ -19,7 +19,7 @@ import org.jspecify.annotations.Nullable;
 @NullMarked
 class OutOfBoundsTypeVariable {
   interface User<F extends @Nullable Foo> {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     Lib<F> get();
   }
 

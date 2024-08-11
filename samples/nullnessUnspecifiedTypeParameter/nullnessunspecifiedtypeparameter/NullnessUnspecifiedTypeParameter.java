@@ -31,31 +31,31 @@ class Test {}
 class Instances {
   static final NullnessUnspecifiedTypeParameter<Object> A1 =
       new NullnessUnspecifiedTypeParameter<>();
-  // jspecify_nullness_mismatch
   static final NullnessUnspecifiedTypeParameter<@Nullable Object> A2 =
+      // :: error: jspecify_nullness_mismatch
       new NullnessUnspecifiedTypeParameter<>();
   static final Test X = new Test();
 }
 
 class Use extends Instances {
   void main() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     A1.foo(null);
     A1.foo(1);
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     A2.foo(null);
     A2.foo(1);
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     A1.bar(null, null);
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     A1.bar(X, null);
     A1.bar(X, 1);
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     A2.bar(null, null);
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     A2.bar(X, null);
     A2.bar(X, 1);
   }

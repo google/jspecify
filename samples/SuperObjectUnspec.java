@@ -20,26 +20,28 @@ import org.jspecify.annotations.NullnessUnspecified;
 @NullMarked
 class SuperObjectUnspec {
   void foo(
+      // See comment in SuperObject.
+      // :: error: jspecify_conflicting_annotations
       Lib<? super @NullnessUnspecified Object> lib,
       Object t,
       @NullnessUnspecified Object tUnspec,
       @Nullable Object tUnionNull) {
     lib.useT(t);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useT(tUnspec);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useT(tUnionNull);
 
     //
 
     lib.useTUnspec(t);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useTUnspec(tUnspec);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useTUnspec(tUnionNull);
 
     //

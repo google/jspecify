@@ -26,17 +26,17 @@ class ExtendsTypeVariableImplementedForNullableTypeArgument {
   }
 
   interface Sub0 extends Filter<@Nullable Object> {
-    // jspecify_nullness_mismatch jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_mismatch jspecify_but_expect_nothing
     <U> Sequence<U> filterMany(Sequence<U> in);
   }
 
   interface Sub1 extends Filter<@Nullable Object> {
-    // jspecify_nullness_mismatch jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_mismatch jspecify_but_expect_nothing
     <U extends Object> Sequence<U> filterMany(Sequence<U> in);
   }
 
   interface Sub2 extends Filter<@Nullable Object> {
-    // jspecify_nullness_not_enough_information jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_not_enough_information jspecify_but_expect_nothing
     <U extends @NullnessUnspecified Object> Sequence<U> filterMany(Sequence<U> in);
   }
 

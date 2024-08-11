@@ -20,47 +20,47 @@ import org.jspecify.annotations.NullnessUnspecified;
 @NullMarked
 class MultiBoundTypeVariableUnionNullToSelf {
   <T extends Object & Lib> T x0(@Nullable T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   <T extends Object & @NullnessUnspecified Lib> T x1(@Nullable T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   <T extends Object & @Nullable Lib> T x2(@Nullable T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   <T extends @NullnessUnspecified Object & Lib> T x3(@Nullable T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   <T extends @NullnessUnspecified Object & @NullnessUnspecified Lib> T x4(@Nullable T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   <T extends @NullnessUnspecified Object & @Nullable Lib> T x5(@Nullable T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   <T extends @Nullable Object & Lib> T x6(@Nullable T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   <T extends @Nullable Object & @NullnessUnspecified Lib> T x7(@Nullable T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   <T extends @Nullable Object & @Nullable Lib> T x8(@Nullable T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 

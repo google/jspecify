@@ -41,82 +41,82 @@ class TypeVariableUnionNullToObjectUnspec<
     //
     UnusedT> {
   @NullnessUnspecified Object x0(@Nullable Never1T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x1(@Nullable ChildOfNever1T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x2(@Nullable UnspecChildOfNever1T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x3(@Nullable NullChildOfNever1T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x4(@Nullable Never2T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x5(@Nullable ChildOfNever2T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x6(@Nullable UnspecChildOfNever2T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x7(@Nullable NullChildOfNever2T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x8(@Nullable UnspecT x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x9(@Nullable ChildOfUnspecT x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x10(@Nullable UnspecChildOfUnspecT x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x11(@Nullable NullChildOfUnspecT x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x12(@Nullable ParametricT x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x13(@Nullable ChildOfParametricT x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x14(@Nullable UnspecChildOfParametricT x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   @NullnessUnspecified Object x15(@Nullable NullChildOfParametricT x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 }

@@ -21,14 +21,14 @@ class NullCheckUnrefineNonNullable {
     if (o != null) {
       return o;
     } else {
-      // jspecify_nullness_mismatch jspecify_but_expect_nothing
+      // :: error: jspecify_nullness_mismatch jspecify_but_expect_nothing
       return o;
     }
   }
 
   Object x3(Object o) {
     if (o == null) {
-      // jspecify_nullness_mismatch jspecify_but_expect_nothing
+      // :: error: jspecify_nullness_mismatch jspecify_but_expect_nothing
       return o;
     } else {
       return o;

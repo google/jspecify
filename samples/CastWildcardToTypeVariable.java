@@ -19,7 +19,7 @@ import org.jspecify.annotations.Nullable;
 @NullMarked
 class CastWildcardToTypeVariable {
   <T> T x(NullableSupplier<?> supplier) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return (T) supplier.get();
   }
 

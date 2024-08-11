@@ -18,7 +18,7 @@ import org.jspecify.annotations.NullMarked;
 @NullMarked
 class GetSuperclass {
   Object getSuperclass(Class<?> clazz) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return clazz.getSuperclass();
   }
 
@@ -27,7 +27,7 @@ class GetSuperclass {
   }
 
   Object getGenericSuperclass(Class<?> clazz) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return clazz.getGenericSuperclass();
   }
 

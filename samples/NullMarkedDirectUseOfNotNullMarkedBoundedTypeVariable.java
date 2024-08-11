@@ -21,7 +21,7 @@ interface NullMarkedDirectUseOfNotNullMarkedBoundedTypeVariable {
     @NullMarked
     class Inner {
       Object x0(T t) {
-        // jspecify_nullness_not_enough_information
+        // :: error: jspecify_nullness_not_enough_information
         return t;
       }
     }
@@ -31,7 +31,7 @@ interface NullMarkedDirectUseOfNotNullMarkedBoundedTypeVariable {
     @NullMarked
     class Inner {
       Object x0(T t) {
-        // jspecify_nullness_not_enough_information
+        // :: error: jspecify_nullness_not_enough_information
         return t;
       }
     }
@@ -41,7 +41,7 @@ interface NullMarkedDirectUseOfNotNullMarkedBoundedTypeVariable {
     @NullMarked
     class Inner {
       Object x0(T t) {
-        // jspecify_nullness_not_enough_information
+        // :: error: jspecify_nullness_not_enough_information
         return t;
       }
     }

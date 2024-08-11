@@ -21,12 +21,12 @@ class NoPathToTypeVariableMinusNull {
     void accept(E e);
   }
 
-  // jspecify_nullness_not_enough_information
+  // :: error: jspecify_nullness_not_enough_information
   abstract class Sub<E> implements Super<E> {
     @NullMarked
     class Foo {
       void go(E e) {
-        // jspecify_nullness_not_enough_information
+        // :: error: jspecify_nullness_not_enough_information
         accept(e);
       }
     }

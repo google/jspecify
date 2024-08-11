@@ -41,62 +41,62 @@ class TypeVariableUnionNullToParent<
     //
     UnusedT> {
   Never1T x0(@Nullable ChildOfNever1T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Never1T x1(@Nullable UnspecChildOfNever1T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Never1T x2(@Nullable NullChildOfNever1T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Never2T x3(@Nullable ChildOfNever2T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Never2T x4(@Nullable UnspecChildOfNever2T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Never2T x5(@Nullable NullChildOfNever2T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   UnspecT x6(@Nullable ChildOfUnspecT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   UnspecT x7(@Nullable UnspecChildOfUnspecT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   UnspecT x8(@Nullable NullChildOfUnspecT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   ParametricT x9(@Nullable ChildOfParametricT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   ParametricT x10(@Nullable UnspecChildOfParametricT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   ParametricT x11(@Nullable NullChildOfParametricT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 }

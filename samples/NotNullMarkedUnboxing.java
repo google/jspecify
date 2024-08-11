@@ -33,12 +33,12 @@ class NotNullMarkedUnboxing {
     }
 
     int x1() {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       return getIntegerUnspec();
     }
 
     int x2() {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return getIntegerUnionNull();
     }
 
@@ -47,12 +47,12 @@ class NotNullMarkedUnboxing {
     }
 
     long x4() {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       return getIntegerUnspec();
     }
 
     long x5() {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return getIntegerUnionNull();
     }
   }

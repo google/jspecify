@@ -31,7 +31,7 @@ class InstanceOfMethodCheck {
     if (Foo.class.isInstance(o)) {
       return o;
     } else {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       return o;
     }
   }
@@ -40,7 +40,7 @@ class InstanceOfMethodCheck {
     if (Foo.class.isInstance(o)) {
       return o;
     } else {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     }
   }

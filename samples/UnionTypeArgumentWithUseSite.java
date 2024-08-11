@@ -32,7 +32,7 @@ class UnionTypeArgumentWithUseSite {
     void t(Object t);
 
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     void tUnspec(@NullnessUnspecified Object t);
 
     @Override
@@ -41,11 +41,11 @@ class UnionTypeArgumentWithUseSite {
 
   interface SubUnspec extends Super<@NullnessUnspecified Object> {
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     void t(@NullnessUnspecified Object t);
 
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     void tUnspec(@NullnessUnspecified Object t);
 
     @Override
@@ -65,39 +65,39 @@ class UnionTypeArgumentWithUseSite {
 
   interface SubWeaker extends Super<Object> {
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     void tUnspec(Object t);
 
     @Override
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     void tUnionNull(Object t);
   }
 
   interface SubWeakerUnspec extends Super<@NullnessUnspecified Object> {
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     void t(Object t);
 
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     void tUnspec(Object t);
 
     @Override
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     void tUnionNull(Object t);
   }
 
   interface SubWeakerUnionNull extends Super<@Nullable Object> {
     @Override
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     void t(Object t);
 
     @Override
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     void tUnspec(Object t);
 
     @Override
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     void tUnionNull(Object t);
   }
 }

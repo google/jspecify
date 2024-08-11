@@ -20,22 +20,22 @@ import org.jspecify.annotations.Nullable;
 @NullMarked
 class StreamFilterIsInstanceAndMapCastNonFilterEquivalents {
   Stream<Object> justFilter(Stream<@Nullable Object> s) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return s;
   }
 
   Stream<Lib> filterAndMap(Stream<@Nullable Object> s) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return s.map(Lib.class::cast);
   }
 
   void filterAndMapAndLambda(Stream<@Nullable Object> s) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     s.map(Lib.class::cast).forEach(l -> l.dereference());
   }
 
   void filterAndMapAndMethodReference(Stream<@Nullable Object> s) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     s.map(Lib.class::cast).forEach(Lib::dereference);
   }
 

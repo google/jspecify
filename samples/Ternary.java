@@ -24,27 +24,27 @@ abstract class Ternary {
   }
 
   Object x1() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return b() ? object() : objectUnspec();
   }
 
   Object x2() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return b() ? object() : objectUnionNull();
   }
 
   Object x3() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return b() ? objectUnspec() : objectUnspec();
   }
 
   Object x4() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return b() ? objectUnspec() : objectUnionNull();
   }
 
   Object x5() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return b() ? objectUnionNull() : objectUnionNull();
   }
 
@@ -53,14 +53,14 @@ abstract class Ternary {
   }
 
   Object x7() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return b() ? null : objectUnionNull();
   }
 
-  // jspecify_nullness_mismatch
+  // :: error: jspecify_nullness_mismatch
   Object x0 = b() ? null : objectUnionNull();
 
-  // jspecify_nullness_not_enough_information
+  // :: error: jspecify_nullness_not_enough_information
   @NullnessUnspecified Object x1 = b() ? null : objectUnionNull();
 
   @Nullable Object x2 = b() ? null : objectUnionNull();

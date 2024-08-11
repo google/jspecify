@@ -20,62 +20,62 @@ import org.jspecify.annotations.NullnessUnspecified;
 @NullMarked
 abstract class CaptureConvertedUnionNullToObject {
   Object x0(ImplicitlyObjectBounded<? extends Lib> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return unionNull(x.get());
   }
 
   Object x1(ImplicitlyObjectBounded<? extends @NullnessUnspecified Lib> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return unionNull(x.get());
   }
 
   Object x2(ImplicitlyObjectBounded<? extends @Nullable Lib> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return unionNull(x.get());
   }
 
   Object x3(ExplicitlyObjectBounded<? extends Lib> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return unionNull(x.get());
   }
 
   Object x4(ExplicitlyObjectBounded<? extends @NullnessUnspecified Lib> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return unionNull(x.get());
   }
 
   Object x5(ExplicitlyObjectBounded<? extends @Nullable Lib> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return unionNull(x.get());
   }
 
   Object x6(UnspecBounded<? extends Lib> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return unionNull(x.get());
   }
 
   Object x7(UnspecBounded<? extends @NullnessUnspecified Lib> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return unionNull(x.get());
   }
 
   Object x8(UnspecBounded<? extends @Nullable Lib> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return unionNull(x.get());
   }
 
   Object x9(NullableBounded<? extends Lib> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return unionNull(x.get());
   }
 
   Object x10(NullableBounded<? extends @NullnessUnspecified Lib> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return unionNull(x.get());
   }
 
   Object x11(NullableBounded<? extends @Nullable Lib> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return unionNull(x.get());
   }
 

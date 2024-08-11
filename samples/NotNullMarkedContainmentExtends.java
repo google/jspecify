@@ -18,22 +18,22 @@ import org.jspecify.annotations.NullnessUnspecified;
 
 class NotNullMarkedContainmentExtends {
   void x() {
-    // jspecify_nullness_not_enough_information jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_not_enough_information 
     new Check<Lib<? extends Foo>, Lib<? extends Foo>>();
 
-    // jspecify_nullness_not_enough_information jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_not_enough_information 
     new Check<Lib<? extends Foo>, Lib<? extends @NullnessUnspecified Foo>>();
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     new Check<Lib<? extends Foo>, Lib<? extends @Nullable Foo>>();
 
-    // jspecify_nullness_not_enough_information jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_not_enough_information 
     new Check<Lib<? extends @NullnessUnspecified Foo>, Lib<? extends Foo>>();
 
-    // jspecify_nullness_not_enough_information jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_not_enough_information 
     new Check<Lib<? extends @NullnessUnspecified Foo>, Lib<? extends @NullnessUnspecified Foo>>();
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     new Check<Lib<? extends @NullnessUnspecified Foo>, Lib<? extends @Nullable Foo>>();
 
     new Check<Lib<? extends @Nullable Foo>, Lib<? extends Foo>>();

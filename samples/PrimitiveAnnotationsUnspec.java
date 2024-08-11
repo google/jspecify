@@ -20,15 +20,15 @@ import org.jspecify.annotations.NullnessUnspecified;
 @NullMarked
 class PrimitiveAnnotationsUnspec {
   void foo(
-      // jspecify_nullness_intrinsically_not_nullable
+      // :: error: jspecify_nullness_intrinsically_not_nullable
       @NullnessUnspecified int x1,
-      // jspecify_nullness_intrinsically_not_nullable
+      // :: error: jspecify_nullness_intrinsically_not_nullable
       @NullnessUnspecified int[] x2,
       int x3,
       int[] x4,
       int @NullnessUnspecified [] x5,
 
-      // jspecify_nullness_intrinsically_not_nullable
+      // :: error: jspecify_nullness_intrinsically_not_nullable
       Lib<@NullnessUnspecified int[]> x6,
       Lib<int @NullnessUnspecified []> x7) {}
 

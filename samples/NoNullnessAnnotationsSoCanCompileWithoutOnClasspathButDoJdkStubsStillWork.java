@@ -15,7 +15,7 @@
  */
 class NoNullnessAnnotationsSoCanCompileWithoutOnClasspathButDoJdkStubsStillWork {
   void foo() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     Integer.parseInt(null);
   }
 }

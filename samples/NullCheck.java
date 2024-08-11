@@ -24,7 +24,7 @@ class NullCheck {
     if (o != null) {
       return o;
     } else {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     }
   }
@@ -33,14 +33,14 @@ class NullCheck {
     if (o != null) {
       return o;
     } else {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     }
   }
 
   Object x4(@NullnessUnspecified Object o) {
     if (o == null) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     } else {
       return o;
@@ -49,7 +49,7 @@ class NullCheck {
 
   Object x5(@Nullable Object o) {
     if (o == null) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     } else {
       return o;

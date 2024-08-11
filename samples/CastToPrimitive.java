@@ -24,12 +24,12 @@ class CastToPrimitive {
   }
 
   int x1(@NullnessUnspecified Object o) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return (int) o;
   }
 
   int x2(@Nullable Object o) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return (int) o;
   }
 }

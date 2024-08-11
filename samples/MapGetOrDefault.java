@@ -25,19 +25,19 @@ class MapGetOrDefault {
 
   Object nonnullValuesNullDefault(
       Map<Object, Object> map, Object key, @Nullable Object defaultValue) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return map.getOrDefault(key, defaultValue);
   }
 
   Object nullValuesNonnullDefault(
       Map<Object, @Nullable Object> map, Object key, Object defaultValue) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return map.getOrDefault(key, defaultValue);
   }
 
   Object nullValuesNullDefault(
       Map<Object, @Nullable Object> map, Object key, @Nullable Object defaultValue) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return map.getOrDefault(key, defaultValue);
   }
 }

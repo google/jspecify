@@ -30,7 +30,7 @@ class UseCheckForNull {
   }
 
   Object x2(@CheckForNull Object o) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return o;
   }
 
@@ -40,7 +40,7 @@ class UseCheckForNull {
   }
 
   Object x4(@CheckForNull Object[] o) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return o;
   }
 
@@ -51,9 +51,9 @@ class UseCheckForNull {
         @NullnessUnspecified Object unspec,
         @Nullable Object unionNull) {
       proto.nonNull(object);
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       proto.nonNull(unspec);
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       proto.nonNull(unionNull);
 
       proto.unionNull(object);
@@ -66,7 +66,7 @@ class UseCheckForNull {
     }
 
     Object unionNull(SomeProto proto) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return proto.unionNull();
     }
   }

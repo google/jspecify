@@ -29,7 +29,7 @@ interface AllPure {
   }
 
   default void noCheck(Foo foo) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     accept(foo.bar());
   }
 
@@ -40,7 +40,7 @@ interface AllPure {
   }
 
   default void noCheckWithArg(Foo foo) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     accept(foo.bar(makeArg()));
   }
 
@@ -51,7 +51,7 @@ interface AllPure {
   }
 
   default void noCheck(FooSupplier supplier) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     accept(supplier.foo().bar());
   }
 

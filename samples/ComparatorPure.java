@@ -22,22 +22,22 @@ import org.jspecify.annotations.NullMarked;
 @NullMarked
 interface ComparatorPure {
   default void noCheck(SortedSet<?> s) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     accept(s.comparator());
   }
 
   default void noCheck(SortedMap<?, ?> s) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     accept(s.comparator());
   }
 
   default void noCheck(NavigableSet<?> s) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     accept(s.comparator());
   }
 
   default void noCheck(NavigableMap<?, ?> s) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     accept(s.comparator());
   }
 

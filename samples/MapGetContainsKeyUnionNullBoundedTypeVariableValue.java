@@ -21,39 +21,39 @@ import org.jspecify.annotations.NullnessUnspecified;
 @NullMarked
 class MapGetContainsKeyUnionNullBoundedTypeVariableValue<V extends @Nullable Object> {
   Object noCheckObject(Map<Object, V> map, Object key) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return map.get(key);
   }
 
   Object checkObject(Map<Object, V> map, Object key) {
     if (map.containsKey(key)) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return map.get(key);
     }
     return "";
   }
 
   Object noCheckObjectUnspec(Map<Object, @NullnessUnspecified V> map, Object key) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return map.get(key);
   }
 
   Object checkObjectUspec(Map<Object, @NullnessUnspecified V> map, Object key) {
     if (map.containsKey(key)) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return map.get(key);
     }
     return "";
   }
 
   Object noCheckObjectUnionNull(Map<Object, @Nullable V> map, Object key) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return map.get(key);
   }
 
   Object checkObjectUnionNull(Map<Object, @Nullable V> map, Object key) {
     if (map.containsKey(key)) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return map.get(key);
     }
     return "";

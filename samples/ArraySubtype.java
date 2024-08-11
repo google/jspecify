@@ -32,17 +32,17 @@ abstract class ArraySubtype {
   }
 
   void clientUnspec(@NullnessUnspecified Object[] l) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     useArray(l);
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     useArrayOfUnspec(l);
     useArrayOfUnionNull(l);
   }
 
   void clientUnionNull(@Nullable Object[] l) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     useArray(l);
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     useArrayOfUnspec(l);
     useArrayOfUnionNull(l);
   }

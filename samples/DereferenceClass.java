@@ -24,12 +24,12 @@ abstract class DereferenceClass {
   }
 
   void x1(@NullnessUnspecified Lib x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     x.run();
   }
 
   void x2(@Nullable Lib x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     x.run();
   }
 

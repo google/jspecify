@@ -40,35 +40,35 @@ class OverrideParameters {
     void useObject(Object o);
 
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     void useObjectUnspec(Object o);
 
     @Override
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     void useObjectUnionNull(Object o);
   }
 
   interface SubObjectUnspec extends Super {
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     void useObject(@NullnessUnspecified Object o);
 
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     void useObjectUnspec(@NullnessUnspecified Object o);
 
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     void useObjectUnionNull(@NullnessUnspecified Object o);
   }
 
   interface SubObjectUnionNull extends Super {
     @Override
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     void useObject(@Nullable Object o);
 
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     void useObjectUnspec(@Nullable Object o);
 
     @Override

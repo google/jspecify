@@ -38,28 +38,28 @@ class Test {}
 @NullMarked
 public class TypeParameterBounds {
   <T extends Test> void main(
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       A<@Nullable Object> a1, A<Test> a2, B<@Nullable Object> b1, B<Test> b2, T x) {
     a1.foo(null);
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     a1.<@Nullable T>bar(null);
     a1.<T>bar(x);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     a2.foo(null);
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     a2.<@Nullable T>bar(null);
     a2.<T>bar(x);
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     b1.foo(null);
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     b1.<@Nullable T>bar(null);
     b1.<T>bar(x);
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     b2.foo(null);
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     b2.<@Nullable T>bar(null);
     b2.<T>bar(x);
   }

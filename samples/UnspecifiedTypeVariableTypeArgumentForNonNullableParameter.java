@@ -22,9 +22,9 @@ class UnspecifiedTypeVariableTypeArgumentForNonNullableParameter {
   }
 
   <E> void x(
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       ConsumerWithNonNullableBound<E> c) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     c.accept(null);
   }
 }

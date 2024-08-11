@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 class NotNullMarkedUseOfSelfType {
-  // jspecify_nullness_not_enough_information
+  // :: error: jspecify_nullness_not_enough_information
   <T extends Enum<T>> void go() {}
 
   void go(Enum<?> e) {}

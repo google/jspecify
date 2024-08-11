@@ -23,7 +23,7 @@ import org.jspecify.annotations.NullnessUnspecified;
 @NullMarked
 class ArraysCopyOf {
   Object[] arbitrary(Object[] o, int length) {
-    // jspecify_nullness_mismatch jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_mismatch jspecify_but_expect_nothing
     return copyOf(o, length);
   }
 
@@ -32,29 +32,29 @@ class ArraysCopyOf {
   }
 
   Object[] arbitraryUnionNull(@Nullable Object[] o, int length) {
-    // jspecify_nullness_mismatch jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_mismatch jspecify_but_expect_nothing
     return copyOf(o, length);
   }
 
   Object[] arrayLengthUnionNull(@Nullable Object[] o) {
-    // jspecify_nullness_mismatch jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_mismatch jspecify_but_expect_nothing
     return copyOf(o, o.length);
   }
 
   Object[] arbitraryUnspec(@NullnessUnspecified Object[] o, int length) {
-    // jspecify_nullness_mismatch jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_mismatch jspecify_but_expect_nothing
     return copyOf(o, length);
   }
 
   Object[] arrayLengthUnspec(@NullnessUnspecified Object[] o) {
-    // jspecify_nullness_not_enough_information jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_not_enough_information jspecify_but_expect_nothing
     return copyOf(o, o.length);
   }
 
   // TODO(cpovirk): Samples for copyOfRange besides just this one:
 
   Object[] arbitrary(Object[] o, int from, int to) {
-    // jspecify_nullness_mismatch jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_mismatch jspecify_but_expect_nothing
     return copyOfRange(o, from, to);
   }
 

@@ -20,7 +20,7 @@ import org.jspecify.annotations.NullUnmarked;
 interface NullUnmarkedUndoesNullMarked {
   @NullUnmarked
   default void acceptUnspecObject(Object o) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     acceptObject(o);
   }
 

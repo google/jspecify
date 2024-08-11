@@ -19,7 +19,7 @@ import org.jspecify.annotations.Nullable;
 
 class Bar {
   Object x(@Nullable Object o) {
-    // test:cannot-convert:Object? to Object!
+    // :: error: test:cannot-convert:Object? to Object!
     return o;
   }
 }

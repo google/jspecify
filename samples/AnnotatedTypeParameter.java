@@ -20,12 +20,12 @@ import org.jspecify.annotations.Nullable;
 // conformance-tests/src/assertions/java/org/jspecify/conformance/tests/irrelevantannotations/nullmarked/AnnotatedTypeParameters.java
 @NullMarked
 class AnnotatedTypeParameter {
-  // jspecify_unrecognized_location
+  // :: error: jspecify_unrecognized_location
   interface Lib1<@Nullable T> {}
 
-  // jspecify_unrecognized_location
+  // :: error: jspecify_unrecognized_location
   interface Lib2<@Nullable T extends Object> {}
 
-  // jspecify_unrecognized_location
+  // :: error: jspecify_unrecognized_location
   interface Lib3<@Nullable T extends @Nullable Object> {}
 }

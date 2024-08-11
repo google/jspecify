@@ -22,7 +22,7 @@ class CurrentThreadThreadGroup {
   }
 
   Object x(Thread t) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return t.getThreadGroup();
   }
 }

@@ -19,7 +19,7 @@ import org.jspecify.annotations.Nullable;
 @NullMarked
 abstract class DereferenceTernary {
   void x(boolean b, @Nullable Lib x, Lib y) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     (b ? x : y).run();
   }
 

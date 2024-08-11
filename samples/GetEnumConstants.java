@@ -18,17 +18,17 @@ import org.jspecify.annotations.NullMarked;
 @NullMarked
 class GetEnumConstants {
   Object arbitraryClass(Class<?> c) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return c.getEnumConstants();
   }
 
   Object arbitraryObject(Object o) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return o.getClass().getEnumConstants();
   }
 
   Object literalNonEnum() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return Object.class.getEnumConstants();
   }
 
@@ -49,14 +49,14 @@ class GetEnumConstants {
   }
 
   Object literalJavaLangEnum() {
-    // jspecify_nullness_mismatch jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_mismatch jspecify_but_expect_nothing
     return Enum.class.getEnumConstants();
   }
 
   enum MyEnum {
     FOO {
       Object fromSubclass() {
-        // jspecify_nullness_mismatch jspecify_but_expect_nothing
+        // :: error: jspecify_nullness_mismatch jspecify_but_expect_nothing
         return getClass().getEnumConstants();
       }
     }

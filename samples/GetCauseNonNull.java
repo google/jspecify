@@ -21,7 +21,7 @@ import org.jspecify.annotations.NullMarked;
 @NullMarked
 abstract class GetCauseNonNull {
   Object getCause(Throwable t) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return t.getCause();
   }
 

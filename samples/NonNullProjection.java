@@ -20,7 +20,7 @@ import org.jspecify.annotations.Nullable;
 @NullMarked
 class NonNullProjection<T extends @Nullable Object> {
   Object parametric(T t) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return t;
   }
 

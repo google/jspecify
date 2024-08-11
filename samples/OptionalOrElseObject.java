@@ -29,13 +29,13 @@ abstract class OptionalOrElseObject {
 
   Object x1(@NullnessUnspecified Object p) {
     Object result = o().orElse(p);
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return result;
   }
 
   Object x2(@Nullable Object p) {
     Object result = o().orElse(p);
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return result;
   }
 }

@@ -36,11 +36,11 @@ abstract class LocalVariable {
       synchronized (string) {
       }
 
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       synchronized (stringUnspec) {
       }
 
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       synchronized (stringUnionNull) {
       }
     }

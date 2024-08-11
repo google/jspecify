@@ -34,10 +34,10 @@ class A<T extends Object, E extends @Nullable Object, F extends @NullnessUnspeci
 class Use {
   public static void main(
       A<Object, Object, Object> aNotNullNotNullNotNull,
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       A<Object, Object, @Nullable Object> aNotNullNotNullNull,
       A<Object, @Nullable Object, Object> aNotNullNullNotNull,
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       A<Object, @Nullable Object, @Nullable Object> aNotNullNullNull,
       WildcardsWithDefault b) {
     b.noBoundsNotNull(aNotNullNotNullNotNull);

@@ -29,7 +29,7 @@ class A {
 }
 
 class B {
-  // jspecify_nullness_not_enough_information
+  // :: error: jspecify_nullness_not_enough_information
   public void bar(TypeArgumentsFromParameterBounds<Test, Test, Test> a) {}
 }
 
@@ -39,28 +39,28 @@ class Test {}
 class Use {
   public static void main(
       TypeArgumentsFromParameterBounds<Test, Test, Test> aNotNullNotNullNotNull,
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       TypeArgumentsFromParameterBounds<Test, Test, @Nullable Test> aNotNullNotNullNull,
       TypeArgumentsFromParameterBounds<Test, @Nullable Test, Test> aNotNullNullNotNull,
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       TypeArgumentsFromParameterBounds<Test, @Nullable Test, @Nullable Test> aNotNullNullNull,
       A a,
       B b) {
     a.bar(aNotNullNotNullNotNull);
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     a.bar(aNotNullNotNullNull);
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     a.bar(aNotNullNullNotNull);
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     a.bar(aNotNullNullNull);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     b.bar(aNotNullNotNullNotNull);
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     b.bar(aNotNullNotNullNull);
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     b.bar(aNotNullNullNotNull);
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     b.bar(aNotNullNullNull);
   }
 }

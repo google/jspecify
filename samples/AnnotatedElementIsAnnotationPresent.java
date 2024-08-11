@@ -19,7 +19,7 @@ import org.jspecify.annotations.NullMarked;
 @NullMarked
 class AnnotatedElementIsAnnotationPresent {
   Object noCheck(AnnotatedElement element, Class<Foo> clazz) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return element.getAnnotation(clazz);
   }
 
@@ -32,7 +32,6 @@ class AnnotatedElementIsAnnotationPresent {
 
   Object checkWildcard(AnnotatedElement element, Class<? extends Foo> clazz) {
     if (element.isAnnotationPresent(clazz)) {
-      // jspecify_but_expect_error
       return element.getAnnotation(clazz);
     }
     return "";

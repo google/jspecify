@@ -24,37 +24,37 @@ class SameTypeObject {
   }
 
   Lib<Object> x1(Lib<@NullnessUnspecified Object> x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Lib<Object> x2(Lib<@Nullable Object> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Lib<@NullnessUnspecified Object> x3(Lib<Object> x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Lib<@NullnessUnspecified Object> x4(Lib<@NullnessUnspecified Object> x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Lib<@NullnessUnspecified Object> x5(Lib<@Nullable Object> x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 
   Lib<@Nullable Object> x6(Lib<Object> x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return x;
   }
 
   Lib<@Nullable Object> x7(Lib<@NullnessUnspecified Object> x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return x;
   }
 

@@ -19,7 +19,7 @@ import org.jspecify.annotations.Nullable;
 @NullMarked
 class NullExclusiveThreadLocal {
   void x(ThreadLocal<Object> threadLocal) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     ThreadLocal<Object> x0 = new ThreadLocal<>();
 
     ThreadLocal<@Nullable Object> x1 = new ThreadLocal<>();
@@ -32,14 +32,14 @@ class NullExclusiveThreadLocal {
           }
         };
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     ThreadLocal<Object> x3 = new MyThreadLocalWithoutInitialValue();
 
     ThreadLocal<Object> x4 = new MyThreadLocalWithInitialValue();
 
     ThreadLocal<Object> x5 = ThreadLocal.withInitial(() -> "");
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     ThreadLocal.withInitial(() -> null);
   }
 

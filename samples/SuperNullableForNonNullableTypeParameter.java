@@ -25,7 +25,7 @@ class SuperNullableForNonNullableTypeParameter {
   }
 
   static <T, S extends @Nullable T> NullableLib<S> x(NonNullableLib<T> l, S s) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return new NullableLib<>(l, s);
   }
 }

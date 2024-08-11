@@ -47,15 +47,13 @@ class MultiplePathsToTypeVariable {
     return t.get();
   }
 
-  // jspecify_but_expect_warning
   <T> Object x4(TUnspecBounded<T, ? extends @NullnessUnspecified T> t) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return t.get();
   }
 
-  // jspecify_but_expect_warning
   <T> Object x5(TUnspecBounded<T, ? extends @Nullable T> t) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return t.get();
   }
 
@@ -64,12 +62,12 @@ class MultiplePathsToTypeVariable {
   }
 
   <T> Object x7(TUnionNullBounded<T, ? extends @NullnessUnspecified T> t) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return t.get();
   }
 
   <T> Object x8(TUnionNullBounded<T, ? extends @Nullable T> t) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return t.get();
   }
 }

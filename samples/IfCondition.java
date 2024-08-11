@@ -38,10 +38,10 @@ abstract class IfCondition {
 
     if (boxed()) {}
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     if (boxedUnspec()) {}
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     if (boxedUnionNull()) {}
   }
 }

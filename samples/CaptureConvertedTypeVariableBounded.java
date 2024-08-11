@@ -73,17 +73,17 @@ class CaptureConvertedTypeVariableBounded {
     }
 
     Object x1(Inner<? extends @NullnessUnspecified Object> p) {
-      // jspecify_nullness_not_enough_information jspecify_but_expect_nothing
+      // :: error: jspecify_nullness_not_enough_information 
       return p.get();
     }
 
     Object x2(Inner<? extends @Nullable Object> p) {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       return p.get();
     }
 
     Object x3(Inner<?> p) {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       return p.get();
     }
   }
@@ -98,17 +98,17 @@ class CaptureConvertedTypeVariableBounded {
     }
 
     Object x1(Inner<? extends @NullnessUnspecified Object> p) {
-      // jspecify_nullness_not_enough_information jspecify_but_expect_nothing
+      // :: error: jspecify_nullness_not_enough_information
       return p.get();
     }
 
     Object x2(Inner<? extends @Nullable Object> p) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return p.get();
     }
 
     Object x3(Inner<?> p) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return p.get();
     }
   }

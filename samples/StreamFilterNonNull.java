@@ -29,7 +29,7 @@ class StreamFilterNonNull {
   }
 
   Stream<Object> operatorOtherOperand(Stream<@Nullable Object> s, Object other) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return s.filter(x -> other != null);
   }
 
@@ -38,7 +38,7 @@ class StreamFilterNonNull {
   }
 
   Stream<Object> otherMethodReference(Stream<@Nullable Object> s) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return s.filter(Objects::isNull);
   }
 }

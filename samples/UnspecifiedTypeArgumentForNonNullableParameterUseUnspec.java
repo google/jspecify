@@ -23,30 +23,30 @@ class UnspecifiedTypeArgumentForNonNullableParameterUseUnspec {
   }
 
   String x0(
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       SupplierWithNonNullableBound<@NullnessUnspecified String> s) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return s.get();
   }
 
   <E extends String> String x1(
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       SupplierWithNonNullableBound<@NullnessUnspecified E> s) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return s.get();
   }
 
   <E extends @NullnessUnspecified String> String x2(
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       SupplierWithNonNullableBound<E> s) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return s.get();
   }
 
   <E extends @NullnessUnspecified String> String x3(
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       SupplierWithNonNullableBound<@NullnessUnspecified E> s) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return s.get();
   }
 }

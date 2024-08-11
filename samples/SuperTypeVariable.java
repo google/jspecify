@@ -23,20 +23,20 @@ class SuperTypeVariable {
       Lib<? super T> lib, T t, @NullnessUnspecified T tUnspec, @Nullable T tUnionNull) {
     lib.useT(t);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useT(tUnspec);
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     lib.useT(tUnionNull);
 
     //
 
     lib.useTUnspec(t);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useTUnspec(tUnspec);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useTUnspec(tUnionNull);
 
     //
@@ -52,20 +52,20 @@ class SuperTypeVariable {
       Lib<? super T> lib, T t, @NullnessUnspecified T tUnspec, @Nullable T tUnionNull) {
     lib.useT(t);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useT(tUnspec);
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     lib.useT(tUnionNull);
 
     //
 
     lib.useTUnspec(t);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useTUnspec(tUnspec);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useTUnspec(tUnionNull);
 
     //
@@ -81,20 +81,20 @@ class SuperTypeVariable {
       Lib<? super T> lib, T t, @NullnessUnspecified T tUnspec, @Nullable T tUnionNull) {
     lib.useT(t);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useT(tUnspec);
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     lib.useT(tUnionNull);
 
     //
 
     lib.useTUnspec(t);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useTUnspec(tUnspec);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useTUnspec(tUnionNull);
 
     //
@@ -110,20 +110,20 @@ class SuperTypeVariable {
       Lib<? super T> lib, T t, @NullnessUnspecified T tUnspec, @Nullable T tUnionNull) {
     lib.useT(t);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useT(tUnspec);
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     lib.useT(tUnionNull);
 
     //
 
     lib.useTUnspec(t);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useTUnspec(tUnspec);
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     lib.useTUnspec(tUnionNull);
 
     //

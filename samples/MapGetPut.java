@@ -19,7 +19,7 @@ import org.jspecify.annotations.NullMarked;
 @NullMarked
 class MapGetPut {
   Object noCheckObject(Map<Object, Object> map, Object key) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return map.get(key);
   }
 

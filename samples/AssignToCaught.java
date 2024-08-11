@@ -22,9 +22,9 @@ abstract class AssignToCaught {
       throw new Exception();
     } catch (Exception e) {
       e.toString();
-      // jspecify_but_expect_error
+      // :: error: jspecify_but_expect_error
       e = null;
-      // jspecify_nullness_mismatch jspecify_but_expect_nothing
+      // :: error: jspecify_nullness_mismatch jspecify_but_expect_nothing
       e.toString();
       e = get();
       e.toString();

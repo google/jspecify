@@ -18,7 +18,7 @@ import org.jspecify.annotations.NullMarked;
 @NullMarked
 class IsArrayGetComponentType {
   Object noCheck(Class<?> clazz) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return clazz.getComponentType();
   }
 

@@ -31,7 +31,7 @@ abstract class AugmentedInferenceAgreesWithBaseInference {
      * here, where the type of the expression is forced to conform to the target type, is there a
      * problem.
      */
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     List<? extends Foo<?>> l2 = makeList(a, b);
   }
 

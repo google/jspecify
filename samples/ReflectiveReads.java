@@ -23,7 +23,7 @@ abstract class ReflectiveReads {
     Object o = f.get(null);
     mustBeNonNull(o);
     if (o == null) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       mustBeNonNull(o);
     } else {
       mustBeNonNull(o);
@@ -34,7 +34,7 @@ abstract class ReflectiveReads {
     Object o = m.invoke(null);
     mustBeNonNull(o);
     if (o == null) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       mustBeNonNull(o);
     } else {
       mustBeNonNull(o);

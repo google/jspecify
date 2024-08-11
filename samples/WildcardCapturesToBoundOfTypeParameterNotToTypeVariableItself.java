@@ -22,7 +22,7 @@ abstract class WildcardCapturesToBoundOfTypeParameterNotToTypeVariableItself<
   abstract E get();
 
   E x(WildcardCapturesToBoundOfTypeParameterNotToTypeVariableItself<? extends @Nullable E> p) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return p.get();
   }
 }

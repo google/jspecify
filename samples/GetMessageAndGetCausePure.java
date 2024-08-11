@@ -18,10 +18,10 @@ import org.jspecify.annotations.NullMarked;
 @NullMarked
 interface GetMessageAndGetCausePure {
   default void noCheck(Throwable t) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     accept(t.getCause());
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     accept(t.getMessage());
   }
 
@@ -36,10 +36,10 @@ interface GetMessageAndGetCausePure {
   }
 
   default void noCheck(Exception e) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     accept(e.getCause());
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     accept(e.getMessage());
   }
 

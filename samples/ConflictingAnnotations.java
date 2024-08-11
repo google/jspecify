@@ -19,8 +19,8 @@ import org.jspecify.annotations.NullnessUnspecified;
 
 @NullMarked
 class ConflictingAnnotations {
-  // jspecify_conflicting_annotations
+  // :: error: jspecify_conflicting_annotations
   @Nullable @NullnessUnspecified Object x1;
-  // jspecify_conflicting_annotations
+  // :: error: jspecify_conflicting_annotations
   @NullnessUnspecified @Nullable Object x2;
 }

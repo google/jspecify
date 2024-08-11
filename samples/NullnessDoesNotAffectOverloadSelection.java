@@ -19,7 +19,7 @@ import org.jspecify.annotations.Nullable;
 @NullMarked
 interface NullnessDoesNotAffectOverloadSelection {
   default void x(@Nullable String s) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     use(s);
   }
 

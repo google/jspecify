@@ -18,12 +18,12 @@ import org.jspecify.annotations.NullMarked;
 @NullMarked
 class GetClassLoader {
   Object arbitraryClass(Class<?> c) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return c.getClassLoader();
   }
 
   Object arbitraryObject(Object o) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return o.getClass().getClassLoader();
   }
 

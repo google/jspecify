@@ -41,82 +41,82 @@ class NullLiteralToTypeVariable<
     //
     UnusedT> {
   Never1T x0() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   ChildOfNever1T x1() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   UnspecChildOfNever1T x2() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   NullChildOfNever1T x3() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   Never2T x4() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   ChildOfNever2T x5() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   UnspecChildOfNever2T x6() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   NullChildOfNever2T x7() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   UnspecT x8() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   ChildOfUnspecT x9() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   UnspecChildOfUnspecT x10() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   NullChildOfUnspecT x11() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   ParametricT x12() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   ChildOfParametricT x13() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   UnspecChildOfParametricT x14() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   NullChildOfParametricT x15() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 }

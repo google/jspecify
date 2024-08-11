@@ -37,52 +37,52 @@ class NotNullMarkedUseOfTypeVariableAsTypeArgument {
   @NullMarked
   class Caller {
     @Nullable Lib<? extends Object> x0(SubObject s) {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       return s.get();
     }
 
     @Nullable Lib<? extends Object> x1(SubObjectUnspec s) {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       return s.get();
     }
 
     @Nullable Lib<? extends Object> x2(SubObjectUnionNull s) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return s.get();
     }
 
     @Nullable Lib<? extends Object> x3(Super<Object> s) {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       return s.get();
     }
 
     @Nullable Lib<? extends Object> x4(Super<@NullnessUnspecified Object> s) {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       return s.get();
     }
 
     @Nullable Lib<? extends Object> x5(Super<@Nullable Object> s) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return s.get();
     }
 
     @Nullable Lib<? extends Object> x6(Super<? extends Object> s) {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       return s.get();
     }
 
     @Nullable Lib<? extends Object> x7(Super<? extends @NullnessUnspecified Object> s) {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       return s.get();
     }
 
     @Nullable Lib<? extends Object> x8(Super<? extends @Nullable Object> s) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return s.get();
     }
 
     @Nullable Lib<? extends Object> x9(Super<?> s) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return s.get();
     }
   }

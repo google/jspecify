@@ -25,17 +25,17 @@ interface SuperVsSuperNullable {
 
   default <T> void x(Receiver<? super T> r, Other<T> o) {
     useNonNullBounded(r, o);
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     useUnspecBounded(r, o);
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     useUnionNullBounded(r, o);
   }
 
   default <T> void x1(Receiver<? super @NullnessUnspecified T> r, Other<T> o) {
     useNonNullBounded(r, o);
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     useUnspecBounded(r, o);
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     useUnionNullBounded(r, o);
   }
 

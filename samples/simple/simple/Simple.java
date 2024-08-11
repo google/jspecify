@@ -28,7 +28,7 @@ public class Simple {
   }
 
   public Derived bar() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 }
@@ -42,14 +42,14 @@ class Derived extends Base {
 @NullMarked
 class Use {
   public static void main(Simple a, Derived x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     a.foo(x, null).foo();
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     a.foo(null, x).foo();
 
     a.bar().foo();
 
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     a.field.foo();
   }
 }

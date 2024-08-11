@@ -19,13 +19,13 @@ import org.jspecify.annotations.NullMarked;
 @NullMarked
 abstract class MapGetContainsKeyOnImplicitThis implements Map<Object, Object> {
   Object noCheckObject(Object key) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return get(key);
   }
 
   Object checkObject(Object key) {
     if (containsKey(key)) {
-      // jspecify_but_expect_error
+      // :: error: jspecify_but_expect_error
       return get(key);
     }
     return "";

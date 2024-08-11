@@ -23,32 +23,32 @@ abstract class UnrecognizedLocationsMisc {
   interface Super {}
 
   static class Sub
-      // jspecify_nullness_intrinsically_not_nullable jspecify_but_expect_nothing
+      // :: error: jspecify_nullness_intrinsically_not_nullable jspecify_but_expect_nothing
       extends @Nullable Object
-      // jspecify_nullness_intrinsically_not_nullable jspecify_but_expect_nothing
+      // :: error: jspecify_nullness_intrinsically_not_nullable jspecify_but_expect_nothing
       implements @Nullable Super {
-    // jspecify_nullness_intrinsically_not_nullable jspecify_but_expect_nothing
+    // :: error: jspecify_nullness_intrinsically_not_nullable jspecify_but_expect_nothing
     @Nullable Sub() {}
   }
 
   void foo() throws Exception {
     try {
-      // jspecify_unrecognized_location
+      // :: error: jspecify_unrecognized_location
       @Nullable Object o;
 
       @Nullable Object[] a0;
 
-      // jspecify_unrecognized_location
+      // :: error: jspecify_unrecognized_location
       Object @Nullable [] a1;
 
-      // jspecify_unrecognized_location
+      // :: error: jspecify_unrecognized_location
       @Nullable Object @Nullable [] a2;
 
-      // jspecify_unrecognized_location
+      // :: error: jspecify_unrecognized_location
     } catch (@Nullable Exception e) {
     }
 
-    // jspecify_unrecognized_location
+    // :: error: jspecify_unrecognized_location
     try (@Nullable AutoCloseable a = get()) {}
   }
 

@@ -21,7 +21,7 @@ import org.jspecify.annotations.NullnessUnspecified;
 @NullMarked
 class ToArray {
   Object[] wildcard(Collection<?> c) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return c.toArray();
   }
 
@@ -34,12 +34,12 @@ class ToArray {
   }
 
   Object[] objectUnspec(Collection<@NullnessUnspecified Object> c) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return c.toArray();
   }
 
   Object[] objectUnionNull(Collection<@Nullable Object> c) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return c.toArray();
   }
 
@@ -48,44 +48,44 @@ class ToArray {
   }
 
   <T> Object[] objectBoundedUnspec(Collection<@NullnessUnspecified T> c) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return c.toArray();
   }
 
   <T> Object[] objectBoundedUnionNull(Collection<@Nullable T> c) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return c.toArray();
   }
 
   <T extends @NullnessUnspecified Object> Object[] unspecBounded(Collection<T> c) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return c.toArray();
   }
 
   <T extends @NullnessUnspecified Object> Object[] unspecBoundedUnspec(
       Collection<@NullnessUnspecified T> c) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return c.toArray();
   }
 
   <T extends @NullnessUnspecified Object> Object[] unspecBoundedUnionNull(
       Collection<@Nullable T> c) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return c.toArray();
   }
 
   <T extends @Nullable Object> Object[] unbounded(Collection<T> c) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return c.toArray();
   }
 
   <T extends @Nullable Object> Object[] unboundedUnspec(Collection<@NullnessUnspecified T> c) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return c.toArray();
   }
 
   <T extends @Nullable Object> Object[] unboundedUnionNull(Collection<@Nullable T> c) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return c.toArray();
   }
 
@@ -106,14 +106,14 @@ class ToArray {
   interface CollectionWithUnspectBound<T extends @NullnessUnspecified Object>
       extends Collection<T> {
     default Object[] toArrayOfNonNull() {
-      // jspecify_nullness_not_enough_information
+      // :: error: jspecify_nullness_not_enough_information
       return toArray();
     }
   }
 
   interface CollectionWithNoBound<T extends @Nullable Object> extends Collection<T> {
     default Object[] toArrayOfNonNull() {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return toArray();
     }
   }

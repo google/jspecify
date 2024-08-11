@@ -51,13 +51,13 @@ class DereferenceTypeVariable<
   }
 
   void x2(UnspecChildOfNever1T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     synchronized (x) {
     }
   }
 
   void x3(NullChildOfNever1T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     synchronized (x) {
     }
   }
@@ -73,61 +73,61 @@ class DereferenceTypeVariable<
   }
 
   void x6(UnspecChildOfNever2T x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     synchronized (x) {
     }
   }
 
   void x7(NullChildOfNever2T x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     synchronized (x) {
     }
   }
 
   void x8(UnspecT x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     synchronized (x) {
     }
   }
 
   void x9(ChildOfUnspecT x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     synchronized (x) {
     }
   }
 
   void x10(UnspecChildOfUnspecT x) {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     synchronized (x) {
     }
   }
 
   void x11(NullChildOfUnspecT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     synchronized (x) {
     }
   }
 
   void x12(ParametricT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     synchronized (x) {
     }
   }
 
   void x13(ChildOfParametricT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     synchronized (x) {
     }
   }
 
   void x14(UnspecChildOfParametricT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     synchronized (x) {
     }
   }
 
   void x15(NullChildOfParametricT x) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     synchronized (x) {
     }
   }

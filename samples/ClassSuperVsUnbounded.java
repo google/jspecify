@@ -18,7 +18,7 @@ import org.jspecify.annotations.NullMarked;
 // did not manage to reproduce the failure from Invokable.java at 3861...
 @NullMarked
 abstract class ClassSuperVsUnbounded<T, R> implements java.lang.reflect.Member {
-  abstract Class<? super Object> make0();
+  abstract Class<? super Number> make0();
 
   @Override
   public abstract Class<? super T> getDeclaringClass();

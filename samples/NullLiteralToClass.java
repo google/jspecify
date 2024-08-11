@@ -20,12 +20,12 @@ import org.jspecify.annotations.NullnessUnspecified;
 @NullMarked
 class NullLiteralToClass {
   Object x0() {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return null;
   }
 
   @NullnessUnspecified Object x1() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     return null;
   }
 

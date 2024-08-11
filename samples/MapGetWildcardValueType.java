@@ -21,7 +21,6 @@ import org.jspecify.annotations.Nullable;
 class MapGetWildcardValueType {
   Object keySetObject(Map<Object, ? extends Object> map) {
     for (Object o : map.keySet()) {
-      // jspecify_but_expect_error
       return map.get(o);
     }
     return "";
@@ -29,7 +28,6 @@ class MapGetWildcardValueType {
 
   Object containsKeyObject(Map<Object, ? extends Object> map, Object o) {
     if (map.containsKey(o)) {
-      // jspecify_but_expect_error
       return map.get(o);
     }
     return "";
@@ -37,7 +35,7 @@ class MapGetWildcardValueType {
 
   Object keySetObjectUnionNull(Map<Object, ? extends @Nullable Object> map) {
     for (Object o : map.keySet()) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return map.get(o);
     }
     return "";
@@ -45,7 +43,7 @@ class MapGetWildcardValueType {
 
   Object containsKeyObjectUnionNull(Map<Object, ? extends @Nullable Object> map, Object o) {
     if (map.containsKey(o)) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return map.get(o);
     }
     return "";
@@ -53,7 +51,6 @@ class MapGetWildcardValueType {
 
   <V extends @Nullable Object> V keySetV(Map<Object, ? extends V> map, V defaultValue) {
     for (Object o : map.keySet()) {
-      // jspecify_but_expect_error
       return map.get(o);
     }
     return defaultValue;
@@ -62,7 +59,6 @@ class MapGetWildcardValueType {
   <V extends @Nullable Object> V containsKeyV(
       Map<Object, ? extends V> map, Object o, V defaultValue) {
     if (map.containsKey(o)) {
-      // jspecify_but_expect_error
       return map.get(o);
     }
     return defaultValue;

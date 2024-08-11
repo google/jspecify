@@ -27,11 +27,11 @@ class NotNullMarkedOverrides {
 
   interface SubObject extends Super {
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     Object makeObject();
 
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     Object makeObjectUnspec();
 
     @Override
@@ -40,11 +40,11 @@ class NotNullMarkedOverrides {
 
   interface SubObjectUnspec extends Super {
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     @NullnessUnspecified Object makeObject();
 
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     @NullnessUnspecified Object makeObjectUnspec();
 
     @Override
@@ -53,11 +53,11 @@ class NotNullMarkedOverrides {
 
   interface SubObjectUnionNull extends Super {
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     @Nullable Object makeObject();
 
     @Override
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     @Nullable Object makeObjectUnspec();
 
     @Override

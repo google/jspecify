@@ -26,9 +26,9 @@ class TypeVariableMinusNullVsTypeVariable {
 
   <T extends @Nullable Object> Supplier<T> cachingIfPossible(Supplier<T> supplier) {
     if (supplier instanceof NonnullSupplier) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       NonnullSupplier<T> cast =
-          // jspecify_nullness_mismatch jspecify_but_expect_nothing
+          // :: error: jspecify_nullness_mismatch jspecify_but_expect_nothing
           (NonnullSupplier<T>) supplier;
       /*
        * TODO(cpovirk): Can/should we change the spec to make the following statement not be a
@@ -48,7 +48,7 @@ class TypeVariableMinusNullVsTypeVariable {
        * (Assuming that we keep the error here, there should be a workaround: Cast to
        * NonnullSupplier<?>, call caching(), and then unchecked-cast the result to Supplier<T>.)
        */
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return cast.caching();
     }
     return supplier;

@@ -19,17 +19,17 @@ import org.jspecify.annotations.Nullable;
 @NullMarked
 abstract class TernaryMoreMessage {
   Object x0(@Nullable Object arg) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return b() ? method() : method();
   }
 
   Object x1(@Nullable Object arg) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return b() ? arg : method();
   }
 
   Object x2(@Nullable Object arg) {
-    // jspecify_nullness_mismatch
+    // :: error: jspecify_nullness_mismatch
     return b() ? arg : arg;
   }
 

@@ -18,15 +18,15 @@ import org.jspecify.annotations.NullnessUnspecified;
 
 class NotNullMarkedContainmentSuperVsExtends {
   void x() {
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     new Check<Lib<? extends Object>, Lib<? super Foo>>();
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     new Check<Lib<? extends @NullnessUnspecified Object>, Lib<? super Foo>>();
 
     new Check<Lib<? extends @Nullable Object>, Lib<? super Foo>>();
 
-    // jspecify_nullness_not_enough_information
+    // :: error: jspecify_nullness_not_enough_information
     new Check<Lib<?>, Lib<? super Foo>>();
   }
 

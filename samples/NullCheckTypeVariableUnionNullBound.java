@@ -23,7 +23,7 @@ class NullCheckTypeVariableUnionNullBound<T extends @Nullable Object> {
     if (o != null) {
       return o;
     } else {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     }
   }
@@ -32,7 +32,7 @@ class NullCheckTypeVariableUnionNullBound<T extends @Nullable Object> {
     if (o != null) {
       return o;
     } else {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     }
   }
@@ -41,14 +41,14 @@ class NullCheckTypeVariableUnionNullBound<T extends @Nullable Object> {
     if (o != null) {
       return o;
     } else {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     }
   }
 
   Object x3(T o) {
     if (o == null) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     } else {
       return o;
@@ -57,7 +57,7 @@ class NullCheckTypeVariableUnionNullBound<T extends @Nullable Object> {
 
   Object x4(@NullnessUnspecified T o) {
     if (o == null) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     } else {
       return o;
@@ -66,7 +66,7 @@ class NullCheckTypeVariableUnionNullBound<T extends @Nullable Object> {
 
   Object x5(@Nullable T o) {
     if (o == null) {
-      // jspecify_nullness_mismatch
+      // :: error: jspecify_nullness_mismatch
       return o;
     } else {
       return o;
