@@ -36,7 +36,7 @@ import java.lang.annotation.Target;
  * </ul>
  *
  * <p>For a comprehensive introduction to JSpecify, please see <a
- * href="http://jspecify.org">jspecify.org</a>.
+ * href="https://jspecify.dev">jspecify.org</a>.
  *
  * <h2 id="projection">Non-null projection</h2>
  *

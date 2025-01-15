@@ -23,7 +23,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'JSpecify',
   tagline: 'Standard Annotations for Java Static Analysis',
-  url: 'http://jspecify.org/',
+  url: 'https://jspecify.dev/',
   baseUrl: '/',
   trailingSlash: true,
   onBrokenLinks: 'throw',
@@ -82,7 +82,7 @@ const config = {
           {to: '/about', label: 'About Us', position: 'left'},
           {to: '/docs/start-here', label: 'Start Here', position: 'left'},
           {
-            href: 'http://jspecify.org/docs/api/org/jspecify/annotations/package-summary.html',
+            href: 'https://jspecify.dev/docs/api/org/jspecify/annotations/package-summary.html',
             label: 'Javadoc',
             position: 'left',
           },
@@ -110,7 +110,7 @@ const config = {
               },
               {
                 label: 'Javadoc',
-                href: 'http://jspecify.org/docs/api/org/jspecify/annotations/package-summary.html',
+                href: 'https://jspecify.dev/docs/api/org/jspecify/annotations/package-summary.html',
               },
               {
                 label: 'Specification',

@@ -15,7 +15,8 @@
  */
 
 /**
- * JSpecify annotations. See <a href="http://jspecify.org">jspecify.org</a> for general information.
+ * JSpecify annotations. See <a href="https://jspecify.dev">jspecify.org</a> for general
+ * information.
  *
  * <h2>What's here?</h2>
  *
@@ -29,7 +30,7 @@
  * may be useful: {@link NullUnmarked} and {@link NonNull}, respectively.
  *
  * <p>For a comprehensive introduction to JSpecify, please see <a
- * href="http://jspecify.org">jspecify.org</a>.
+ * href="https://jspecify.dev">jspecify.org</a>.
  *
  * <h2 id="tool-behavior">Note on tool behavior</h2>
  *

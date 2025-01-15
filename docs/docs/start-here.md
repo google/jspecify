@@ -116,7 +116,7 @@ videos:
 [file an issue]: https://github.com/jspecify/jspecify/issues/new
 [github]: https://github.com/jspecify/jspecify
 [google group]: https://groups.google.com/g/jspecify-discuss
-[javadoc]: http://jspecify.org/docs/api/org/jspecify/annotations/package-summary.html
+[javadoc]: https://jspecify.dev/docs/api/org/jspecify/annotations/package-summary.html
 [faq]: http://github.com/jspecify/jspecify/wiki/jspecify-faq
 [nullness design faq]: https://github.com/jspecify/jspecify/wiki/nullness-design-FAQ
 [issues]: https://github.com/jspecify/jspecify/issues

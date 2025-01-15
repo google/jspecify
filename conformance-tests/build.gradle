@@ -87,7 +87,7 @@ publishing {
                 version = project.version
                 name = 'JSpecify Conformance Test Suite'
                 description = 'Assertions and dependencies representing a suite of conformance tests for JSpecify'
-                url = 'http://jspecify.org/'
+                url = 'https://jspecify.dev/'
                 artifact distZip
                 licenses {
                     license {

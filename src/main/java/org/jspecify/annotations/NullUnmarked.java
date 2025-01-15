@@ -38,7 +38,7 @@ import java.lang.annotation.Target;
  * a codebase has been fully migrated it would be appropriate to ban use of this annotation.
  *
  * <p>For a comprehensive introduction to JSpecify, please see <a
- * href="http://jspecify.org">jspecify.org</a>.
+ * href="https://jspecify.dev">jspecify.org</a>.
  *
  * <h2>Null-marked and null-unmarked code</h2>
  *

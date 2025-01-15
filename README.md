@@ -2,7 +2,7 @@
 
 An artifact of well-specified annotations to power static analysis checks and
 JVM language interop. Developed by consensus of the partner organizations listed
-at our main web site, [jspecify.org](http://jspecify.org).
+at our main web site, [jspecify.org](https://jspecify.dev).
 
 Our current focus is on annotations for nullness analysis.
 
@@ -14,4 +14,4 @@ finalizes our initial nullness annotations.
 
 ## Things to read
 
-See [jspecify.org/docs/start-here](http://jspecify.org/docs/start-here).
+See [jspecify.org/docs/start-here](https://jspecify.dev/docs/start-here).
