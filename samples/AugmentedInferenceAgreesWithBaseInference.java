@@ -23,16 +23,21 @@ abstract class AugmentedInferenceAgreesWithBaseInference {
     List<Foo<?>> l1 = makeList(a, b);
 
     /*
-     * List of some unspecified homogeneous Foo type. There is such a type under plain Java (since
-     * the base type for both is Foo<Object>) but not under JSpecify (since one is Foo<Object> and
-     * the other is Foo<@Nullable Object>).
+     * List of some unspecified (possibly homogeneous) Foo type. javac infers `makeList` to have the
+     * type List<Foo<Object>>, but that's a problem for JSpecify, which needs List<Foo<?>>.
      *
      * Notice that `makeList(a, b)` is fine "in a vacuum" even under JSpecify (as shown above). Only
-     * here, where the type of the expression is forced to conform to the target type, is there a
-     * problem.
+     * here, where the type of the expression is forced to conform to the javac's type for the
+     * expression, is there a problem.
      */
     // jspecify_nullness_mismatch
     List<? extends Foo<?>> l2 = makeList(a, b);
+
+    /*
+     * Here's another way to make javac agree with Gnully on the base type. Like the l1 example, it
+     * produces no mismatch.
+     */
+    List<? extends Foo<?>> l3 = this.<Foo<?>>makeList(a, b);
   }
 
   abstract <T extends @Nullable Object> List<T> makeList(T a, T b);
