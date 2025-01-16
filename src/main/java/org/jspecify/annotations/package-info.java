@@ -19,8 +19,8 @@
  *
  * <h2>What's here?</h2>
  *
- * This package will contain annotations supporting a variety of static analyses. For now it
- * supports just nullness analysis.
+ * This package contains annotations supporting nullness analysis; in the future it might cover
+ * other kinds of static analysis as well.
  *
  * <h3 id="nullness">Nullness</h3>
  *

@@ -75,7 +75,6 @@ import java.lang.annotation.Target;
  * The information in the <a href="NullMarked.html#where">Where it can be used</a> section of {@code
  * NullMarked} applies as well to this annotation.
  */
-// TODO(kevinb9n): word the middle section better with good words
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({PACKAGE, TYPE, METHOD, CONSTRUCTOR})
